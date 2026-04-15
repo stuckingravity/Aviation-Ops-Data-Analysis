@@ -4,9 +4,9 @@ A comprehensive analysis of airline ground operations data to identify delay pat
 
 ## 💭 How I Actually Built This (The Real Story)
 
-When I first got this case study, my instinct was: **pandas + matplotlib, just power through it** — EDA, cleaning, calculations, charts, done. That would've been the fastest path.
+When I first got this case study, my instinct was: **pandas + matplotlib, just power through it** — EDA, cleaning, calculations, charts, or one simple dashboard.
 
-But as I started working, I soon realize 2 things: **If this is supposed to simulate real work, why not use a real workflow? & Am I thinking too student**
+But as I started working, I soon realize one thing: **If I want to simulate real work, what is the real workflow?**
 
 So I switched gears: 
 
@@ -14,7 +14,7 @@ Python for cleaning (had to parse those datetime strings)
 
 ↓
 
-SQL for KPIs (show query skills — this role needs a lot of dbt anyway)
+SQL for KPIs (show query skills — this role needs a lot of dbt)
 
 ↓
 
@@ -35,6 +35,7 @@ Each tool does what it's good at, instead of forcing everything into pandas. And
 The whole process was iterative: **the data told me what questions to ask, and those questions led me to new data.**
 
 By the end, I understood aviation ops data better, got hands-on with how Tarmac's AGOA tool works, and honestly — I really enjoyed the "finding stories in data" part. It made me even more curious about this role.
+
 Let's dive into the case study!☺️
 ---
 
