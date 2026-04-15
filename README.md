@@ -9,6 +9,7 @@ When I first got this case study, my instinct was: **pandas + matplotlib, just p
 But as I started working, I soon realize 2 things: **If this is supposed to simulate real work, why not use a real workflow? & Am I thinking too student**
 
 So I switched gears: 
+
 Python for cleaning (had to parse those datetime strings)
 
 ↓
