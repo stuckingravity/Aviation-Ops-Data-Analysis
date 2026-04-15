@@ -88,7 +88,7 @@ TRANSLATIONS = {
 }
 
 # ============================================================================
-# DATA LOADING & PROCESSING (Based on your notebook logic)
+# DATA LOADING & PROCESSING
 # ============================================================================
 
 @st.cache_data
