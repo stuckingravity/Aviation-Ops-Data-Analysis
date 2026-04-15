@@ -18,7 +18,7 @@ SQL for KPIs (show query skills — this role needs a lot of dbt anyway)
 
 ↓
 
-Interactive Dashboard **Visualization is important!(I have 2 iterations on this)**
+Interactive Dashboard **(Visualization is important! I have 2 iterations on this,verstion 1 in dashboard_version1, version 2 in streamlit_dashboard)**
 
 ↓
 
