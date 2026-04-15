@@ -56,9 +56,15 @@ Aviation-Ops-Data-Analysis/
 │   ├── tarmac_metrics.ipynb                      # Tarmac-facing. Data integrity checks (SQL)
 │   └── turnaround_performance_analysis.ipynb     # Airline-facing. KPI analysis & root cause logic(Python + SQL)
 │
-├── dashboard/
+├── dashboard_version1/
 │   ├── turnaround_dashboard.html                 # Interactive flight-level dashboard
 │   └── turnaround_dashboard.pdf                  # Static dashboard export incase css issues
+│ 
+├── streamlit_dashboard/
+│   ├── Tarmac.xlsx                               # Data
+│   └── requirements
+│   ├── screenshot.png                            # take a quick glance about the dashboard 
+│   └── turnaround_analysis_app.py
 │
 ├── presentation/
 │   └── Flight Turnaround Analysis - Tarmac Technologies.pdf
@@ -121,10 +127,14 @@ Identified 4 critical data quality issues:
 
 ## 📈 Key Deliverables
 
-### 1. Interactive Dashboard (`turnaround_dashboard.html`)
-- Flight-level drill-down with filter by OTP/ADC status
-- Top delayed tasks per flight with delay minutes
-- Daily trends (OTP & ADC performance over time)
+### 1. Interactive Dashboard (`turnaround_dashboard.html` & streamlit_dashboard)
+- **V1: **HTML Static Report (turnaround_dashboard.html)
+  - Focus: Flight-level drill-down and high-level summaries.
+  - Features: Filter by OTP/ADC status and basic daily performance trends.
+
+- **V2: *Streamlit (streamlit_dashboard)
+  - Focus: Granular Task-level analysis.
+  - Features: Deep dive into specific turnaround tasks per flight, including delay minutes and task-specific bottleneck identification.
 
 ### 2. Executive Presentation (PDF, 16 slides)
 - **Part I:** Operational Performance Analysis for Airline
