@@ -6,14 +6,14 @@ A comprehensive analysis of airline ground operations data to identify delay pat
 
 When I first got this case study, my instinct was: **pandas + matplotlib, just power through it** — EDA, cleaning, calculations, charts, done. That would've been the fastest path.
 
-But as I started working, I thought: **If this is supposed to simulate real work, why not use a real workflow?**
+But as I started working, I soon realize 2 things: **If this is supposed to simulate real work, why not use a real workflow? & Am I thinking too student**
 
 So I switched gears: 
 Python for cleaning (had to parse those datetime strings)
 ↓
 SQL for KPIs (show query skills — this role needs a lot of dbt anyway)
 ↓
-Interactive Dashboard 
+Interactive Dashboard **Visualization is important!(I have 2 iterations on this)**
 ↓
 Presentation (tell the story to both airline ops and Tarmac's product team)
 
