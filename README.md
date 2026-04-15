@@ -13,7 +13,7 @@ Python for cleaning (had to parse those datetime strings)
 ↓
 SQL for KPIs (show query skills — this role needs a lot of dbt anyway)
 ↓
-Dashboard (Tableau-like, since Tarmac uses Omni Analytics)
+Interactive Dashboard 
 ↓
 Presentation (tell the story to both airline ops and Tarmac's product team)
 
