@@ -2,6 +2,35 @@
 
 A comprehensive analysis of airline ground operations data to identify delay patterns, root causes, and data quality improvements for AGOA.
 
+## 💭 How I Actually Built This (The Real Story)
+
+When I first got this case study, my instinct was: **pandas + matplotlib, just power through it** — EDA, cleaning, calculations, charts, done. That would've been the fastest path.
+
+But as I started working, I thought: **If this is supposed to simulate real work, why not use a real workflow?**
+
+So I switched gears: 
+Python for cleaning (had to parse those datetime strings)
+↓
+SQL for KPIs (show query skills — this role needs a lot of dbt anyway)
+↓
+Dashboard (Tableau-like, since Tarmac uses Omni Analytics)
+↓
+Presentation (tell the story to both airline ops and Tarmac's product team)
+
+**Plot twist: This approach was actually faster and clearer.**
+
+Each tool does what it's good at, instead of forcing everything into pandas. And along the way, I kept discovering new things:
+
+- While calculating **ADC Compliance**, I hit null values and a logic error (ADC > ATD? Really?). That's when I realized Tarmac's product team probably cares about data quality too.
+
+- Digging into **task delays**, I found the `custom_label` free-text fields — 9 different spellings for "no risk", weight fields all over the place. Low-hanging fruit for standardization.
+
+The whole process was iterative: **the data told me what questions to ask, and those questions led me to new data.**
+
+By the end, I understood aviation ops data better, got hands-on with how Tarmac's AGOA tool works, and honestly — I really enjoyed the "finding stories in data" part. It made me even more curious about this role.
+Let's dive into the casr study!☺️
+---
+
 ## 📊 Project Overview
 
 This case study analyzes 52 flight turnarounds across 3 airports (ORY, SFO, PPT) over a 15-day period (Feb 14-28, 2025) to:
@@ -24,12 +53,12 @@ This case study analyzes 52 flight turnarounds across 3 airports (ORY, SFO, PPT)
 Aviation-Ops-Data-Analysis/
 │
 ├── analysis/
-│   ├── tarmac_metrics.ipynb                      # Data integrity checks (SQL)
-│   └── turnaround_performance_analysis.ipynb     # KPI analysis & root cause logic
+│   ├── tarmac_metrics.ipynb                      # Tarmac-facing. Data integrity checks (SQL)
+│   └── turnaround_performance_analysis.ipynb     # Airline-facing. KPI analysis & root cause logic(Python + SQL)
 │
 ├── dashboard/
 │   ├── turnaround_dashboard.html                 # Interactive flight-level dashboard
-│   └── turnaround_dashboard.pdf                  # Static dashboard export
+│   └── turnaround_dashboard.pdf                  # Static dashboard export incase css issues
 │
 ├── presentation/
 │   └── Flight Turnaround Analysis - Tarmac Technologies.pdf
@@ -39,7 +68,7 @@ Aviation-Ops-Data-Analysis/
 ```
 
 
-## 🎯 Methodology Highlights
+## 🎯 Airline-face insights(details in turnaround_performance_analysis.ipynb)
 
 ### KPI 1: On-Time Performance (OTP)
 - **Definition:** ATD - STD ≤ 15 minutes (IATA standard)
@@ -62,9 +91,9 @@ Aviation-Ops-Data-Analysis/
 
 ---
 
-## 🔍 Data Integrity Findings
+## 🔍 Data Integrity Findings(detailed in `tarmac_metrics.ipynb`)
 
-Identified 4 critical data quality issues (detailed in `tarmac_metrics.ipynb`):
+Identified 4 critical data quality issues:
 
 1. **Null Rates:** STA/ATA 15.3% (departure-only flights), ADC 1.8% (recording failure)
 2. **is_punctual Bug:** Scheduled tasks always False, Checkpoint tasks always True (149 mislabeled)
@@ -109,20 +138,6 @@ Identified 4 critical data quality issues (detailed in `tarmac_metrics.ipynb`):
 
 ---
 
-## 💡 Business Impact
-
-**Annualized Cost of Bag Delivery Delays:**
-- 6 of 14 delayed flights (43%) rooted in Bag Delivery
-- 145 of 444 total delay minutes (33%) from this task
-
-**Recommended Actions:**
-1. Review Bag Delivery SLA with ground handlers (current 24min insufficient for A35K)
-2. Pilot A35K-specific turnaround procedures (more crew/equipment for larger aircraft)
-3. Implement real-time ADC monitoring to catch recording failures same-shift
-4. Collect 3+ months of data before investing in A35K-specific interventions (statistical significance)
-
----
-
 ## 🚀 How to Use This Repository
 
 ### Run the Analysis
@@ -136,9 +151,7 @@ pip install pandas numpy pandasql matplotlib plotly jupyter
 
 # Launch Jupyter
 jupyter notebook
-# Open analysis/turnaround_performance_analysis.ipynb
 ```
-
 ### View the Dashboard
 Open `dashboard/turnaround_dashboard.html` in any browser (no server needed — fully static)
 
