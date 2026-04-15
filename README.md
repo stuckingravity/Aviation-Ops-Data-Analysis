@@ -35,7 +35,7 @@ Each tool does what it's good at, instead of forcing everything into pandas. And
 The whole process was iterative: **the data told me what questions to ask, and those questions led me to new data.**
 
 By the end, I understood aviation ops data better, got hands-on with how Tarmac's AGOA tool works, and honestly — I really enjoyed the "finding stories in data" part. It made me even more curious about this role.
-Let's dive into the casr study!☺️
+Let's dive into the case study!☺️
 ---
 
 ## 📊 Project Overview
