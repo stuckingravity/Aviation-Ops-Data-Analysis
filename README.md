@@ -58,12 +58,12 @@ Aviation-Ops-Data-Analysis/
 │
 ├── dashboard_version1/
 │   ├── turnaround_dashboard.html                 # Interactive flight-level dashboard
-│   └── turnaround_dashboard.pdf                  # Static dashboard export incase css issues
+│   └── turnaround_dashboard.pdf                  # take a quick glance about the dashboard ☺️
 │ 
 ├── streamlit_dashboard/
 │   ├── Tarmac.xlsx                               # Data
 │   └── requirements
-│   ├── screenshot.png                            # take a quick glance about the dashboard 
+│   ├── screenshot.png                            # take a quick glance about the dashboard ☺️
 │   └── turnaround_analysis_app.py
 │
 ├── presentation/
