@@ -19,23 +19,25 @@ This case study analyzes 52 flight turnarounds across 3 airports (ORY, SFO, PPT)
 ---
 
 ## 📁 Repository Structure
+
+```
 Aviation-Ops-Data-Analysis/
 │
 ├── analysis/
-│   ├── tarmac_metrics.ipynb              # Data integrity checks (SQL)
-│   └── turnaround_performance_analysis.ipynb  # KPI analysis & root cause logic
+│   ├── tarmac_metrics.ipynb                      # Data integrity checks (SQL)
+│   └── turnaround_performance_analysis.ipynb     # KPI analysis & root cause logic
 │
 ├── dashboard/
-│   ├── turnaround_dashboard.html         # Interactive flight-level dashboard
-│   └── turnaround_dashboard.pdf          # Static dashboard export
+│   ├── turnaround_dashboard.html                 # Interactive flight-level dashboard
+│   └── turnaround_dashboard.pdf                  # Static dashboard export
 │
 ├── presentation/
 │   └── Flight Turnaround Analysis - Tarmac Technologies.pdf
 │       # 16-slide deck with business insights & recommendations
 │
 └── README.md
+```
 
----
 
 ## 🎯 Methodology Highlights
 
