@@ -11,10 +11,13 @@ But as I started working, I soon realize 2 things: **If this is supposed to simu
 So I switched gears: 
 Python for cleaning (had to parse those datetime strings)
 ↓
+
 SQL for KPIs (show query skills — this role needs a lot of dbt anyway)
 ↓
+
 Interactive Dashboard **Visualization is important!(I have 2 iterations on this)**
 ↓
+
 Presentation (tell the story to both airline ops and Tarmac's product team)
 
 **Plot twist: This approach was actually faster and clearer.**
